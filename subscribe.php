@@ -24,9 +24,6 @@
 	
 	try {
 		$status = $mailchimp->subscribe($list_id, $email);
-		
-		print_r($status);
-		
 		if ($status === Mailchimp_Member_Status::Subscribed) {
 			$response->status = 'Subscribed';
 		}
