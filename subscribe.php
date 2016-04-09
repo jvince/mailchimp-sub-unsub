@@ -23,7 +23,7 @@
 	$mailchimp = new Mailchimp($mailchimp_config->dc, $mailchimp_config->api_key);
 	
 	try {
-		$status = $mailchimp->subscribe($list_id, $email);
+		$status = $mailchimp->subscribe($list_id, $email, $first_name, $last_name);
 		if ($status === Mailchimp_Member_Status::Subscribed) {
 			$response->status = 'Subscribed';
 		}
